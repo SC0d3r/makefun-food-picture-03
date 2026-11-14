@@ -1,8 +1,11 @@
-# make.fun art entry: food-picture-01
+# make.fun art entry: food-picture-03
 
-`main.py` publishes `entry.png` as the entry image. It copies the file byte
-for byte into `MAKEFUN_OUTPUT_DIR` (default `/output`), creating the directory
-if needed, and checks that the copy is identical and non-empty.
+`main.py` publishes `entry.png` as the entry image. It locates `entry.png`
+beside itself and copies it byte for byte into `MAKEFUN_OUTPUT_DIR` (default
+`/output`), creating the directory if needed. It prints the output path and
+the number of bytes written, and exits non-zero with a clear error if the
+source is missing, the copy is empty, or the copy is not byte-identical to
+the source.
 
 Run it locally:
 
